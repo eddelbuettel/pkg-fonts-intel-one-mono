@@ -1,0 +1,22 @@
+Source: fonts-intel-one-mono
+Section: fonts
+Priority: optional
+Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Build-Depends: debhelper-compat (= 12), wget
+Standards-Version: 4.6.2
+Homepage: https://github.com/intel/intel-one-mono/
+
+Package: fonts-intel-one-mono
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: Intel One Mono Typeface 
+ See https://github.com/intel/intel-one-mono/
+ .
+ The packaging is informal. I do not plan to upload this to Debian as
+ I am unsure about the copyright status of the toolchain. The
+ packaging also a somewhat hackish shortcut by extracting the files
+ from the released file obtained from the github repo.
+ .
+ I would be happy for another maintainer (or the fonts team) to take
+ it over as well.
