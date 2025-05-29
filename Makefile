@@ -16,18 +16,19 @@
 ## Copyright (C) 2016 - 2023  Dirk Eddelbuettel
 ## and released under GPL (>=2 )
 
-ttfsrc=https://github.com/intel/intel-one-mono/releases/download/V1.2.0/ttf.zip
-otfsrc=https://github.com/intel/intel-one-mono/releases/download/V1.2.0/otf.zip
-ttfout=$(shell basename ${ttfsrc})
-otfout=$(shell basename ${otfsrc})
+repo_base=https://github.com/intel/intel-one-mono
+ttfarchive=ttf.zip
+otfarchive=otf.zip
+ttfurl=${repo_base}/releases/latest/download/${ttfarchive}
+otfurl=${repo_base}/releases/latest/download/${otfarchive}
 
 all:
-	test -f ${ttfout} || wget ${ttfsrc}
-	unzip ${ttfout}
-	test -f ${otfout} || wget ${otfsrc}
-	unzip ${otfout}
+	test -f ${ttfarchive} || curl -L --remote-name ${ttfurl}
+	unzip ${ttfarchive}
+	test -f ${otfarchive} || curl -L --remote-name ${otfurl}
+	unzip ${otfarchive}
 	rm -rf __MACOSX/ ?tf/.DS_Store
 
 clean:
-	rm -f ${ttfout} ${otfout}
+	rm -f ${ttfarchive} ${otfarchive}
 	rm -rf ttf/ otf/

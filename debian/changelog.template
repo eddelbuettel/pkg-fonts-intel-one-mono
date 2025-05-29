@@ -1,4 +1,4 @@
-fonts-intel-one-mono (1.2.0-0local1) unstable; urgency=low
+fonts-intel-one-mono (VERSION-0local1) unstable; urgency=low
 
   * Initial "local" package -- not uploaded to Debian as it is not
     entirely clear what the copyright situation for the toolchain is

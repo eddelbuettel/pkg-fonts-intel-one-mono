@@ -2,7 +2,7 @@ Source: fonts-intel-one-mono
 Section: fonts
 Priority: optional
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
-Build-Depends: debhelper-compat (= 12), wget
+Build-Depends: debhelper-compat (= 12), curl
 Standards-Version: 4.6.2
 Homepage: https://github.com/intel/intel-one-mono/
 
